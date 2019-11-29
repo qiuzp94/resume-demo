@@ -77,11 +77,15 @@ body{
     background-color: rgba(0, 0, 0, 0.8);
     height: 514px;
 }
+
 /* 用户卡片代码如下 */
-.userCard{
+main{
     max-width: 940px;
-    
     margin: 0 auto;
+}
+.userCard{
+    margin-top:-339px;
+    box-shadow: 2px 3px 10px 0px rgba(0,0,0,0.50);
 }
 .portraitAndIntroduce{
     padding-top:50px;
@@ -124,7 +128,6 @@ body{
     color: black;
     padding-top:28px;
     font-family: 'Times New Roman', Times, serif;
-    font-weight: bold;
 }
 .introduce p{
     font-family: 'Times New Roman', Times, serif;
@@ -140,24 +143,29 @@ body{
     margin-top:20px;
     margin-bottom: 20px;
 }
+.introduce dl{
+    box-sizing: border-box;
+    font-size: 16px;
+    font-family: 'Times New Roman', Times, serif;
+    line-height: 16px;
+}
 
 
 .introduce dl dt{
     color: black;
-    font-family: 'Times New Roman', Times, serif;
     font-weight: bold;
     width:30%;
     float: left;
-    padding-bottom: 10px;
-    font-size: 16px;
+    margin-bottom: 10px;
     
 }
 .introduce dl dd{
-    font-family: 'Times New Roman', Times, serif;
-    float: left;
-    width:70%;
+    float: right;
+    width:65%;
     color:#a3a6ad;
-    padding-bottom: 10px;
+    margin-bottom: 10px;
+
+
 }
 /* 图标链接代码如下 */
 .SocialLink a .icon{
@@ -172,7 +180,7 @@ body{
     display: inline-block;
     padding:5px;
     border-radius: 50%;
-    margin: 15px 13px;
+    margin: 15px 19px;
 }
 .SocialLink{
     background-color:#e4696c;
@@ -181,4 +189,154 @@ body{
 }
 .SocialLink a:hover{
     background-color:#cd5e61 ;
+}
+/* 下载PDF简历代码如下 */
+.downloadResumeWrap{
+    display: flex;
+    justify-content: center;
+    margin: 30px 0;
+    
+}
+a.downloadResume{
+    display: inline-block;
+    color:#3d4456;
+    font-size: 14px;
+    padding:20px 54px;
+    text-decoration: none; 
+    font-weight: bold; 
+    font-family: 'Times New Roman', Times, serif;
+    border-radius: 2px;
+    border:1px solid #cdcfde;
+}
+a.downloadResume:hover{
+    box-shadow: 1px 1px 6px 0px rgba(0,0,0,0.35);
+    transition: box-shadow 0.2s;
+}
+main>p{
+    text-align: center;
+    color:black;
+    line-height: 150%;
+    font-family:"STKaiti";
+    font-size: 19px;
+}
+/* 技能条代码如下 */
+section.skills,
+section.portfolio{
+    margin-top:50px;
+    margin-left:auto;
+    margin-right:auto;
+}
+section.skills>h2,
+section.portfolio>h2{
+    font-size: 35px;
+    text-align: center;
+    font-family: "STHeiti";
+    line-height: 35px;
+    padding:30px 0;
+    font-weight: bold;
+    color:#3d4450;
+    
+}
+section.skills>ul{
+    box-sizing: border-box;
+    background-color: #ffffff; 
+    padding:25px 50px 50px; 
+    box-shadow: 1px 1px 7px 0px rgba(0,0,0,0.7);
+    border-radius: 1px;
+}
+section.skills>ul>li>h3{
+    color:black;
+    padding:20px 0px 0px 0px;
+}
+section.skills>ul>li{
+    float:left;
+    display: block;
+    width:48%;
+    margin-bottom: 10px;
+    font-size: 12px;
+
+}
+section.skills>ul>li:nth-child(even){
+    float: right;
+}
+.progressBar{  
+    margin-top: 5px;
+    background-color:#f9e1e1;
+    border-radius: 2px;
+}
+.progressBar>.progressBarInner{
+    background-color:#e4696c;
+    height: 5px;
+    width:95%;
+    border-radius: 2px;
+}
+/* 作品集代码如下 */
+.portfolio{
+    text-align: center;
+
+}
+.portfolio>nav{
+    color:black;
+    display: inline-block;
+    vertical-align: top;
+    margin-bottom: 25px;
+}
+
+.portfolio>nav>ul{
+    cursor: pointer;
+}
+.portfolio>nav>ul>li{
+    float:left;
+    padding-left: 45px;
+    
+}
+.portfolio>nav>ul>li:nth-child(1){
+    padding-left:0;
+}
+.bar{
+    margin-top:5px;
+    background-color: #ffffff;
+    border-radius: 2px;
+    
+    
+}
+.bar>.barInner{
+    background-color:#e4696c;
+    height: 5px;
+    border-radius: 2px;
+    transition: all 0.3s;
+    width: 40px;
+    margin-left:0px;
+   
+}
+
+.bar>.state2{
+    width: 49px;
+    margin-left:64px;
+}
+.bar>.state3{
+    width: 91px;
+    margin-left:139px;
+}
+.bar>.state1{
+    width: 41px;
+    margin-left:0px;
+}
+.atlas{
+
+    position: relative;
+    height: 597px;
+}
+.atlas>.big,
+.atlas>.small{
+    position: absolute;
+}
+.atlas>.big{
+    top:0px;
+    left: 0px;
+}
+.atlas>.small{
+    position: absolute;
+    top:0px;
+    left: 645px;
 }
