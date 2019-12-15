@@ -1,12 +1,27 @@
 body{
     background-color: #efefef;
 }
-
+  
 /* 公共代码 */
 .clearfix::after{
    content: "";
    display: block;
    clear: both; 
+}
+
+/* 加载动画代码如下  */
+.site-welcome{
+    position:fixed;
+    z-index: 1;
+    background: #ccc;
+    display:none;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+.active{
+    display: flex;
 }
 
 
