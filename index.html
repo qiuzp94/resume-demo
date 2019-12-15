@@ -52,7 +52,7 @@
         <div class="loading"></div>
     </div>
     <header>
-        <div class="topNavBar">
+        <div class="topNavBar" id="topNavBar">
             <div class="topNavBar-inner  clearfix">
                 <div class="logo">
                     <a href="#">
@@ -194,8 +194,18 @@
     </main>
     <script src="./script.js"></script>
     <script>
-
-        document.getElementById('site-welcome').classList.remove('active')
+        setTimeout(function(){
+            document.getElementById('site-welcome').classList.remove('active')
+        },700)
+        
+      window.onscroll = function(xxxx){
+          if(window.scrollY>0){
+              console.log(window.scrollY)
+              topNavBar.classList.add('sticky')
+          }else{
+              topNavBar.classList.remove('sticky')
+          }
+      }
     </script>
 </body>
 </html>
