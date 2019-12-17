@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="zh-Hans">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,44 +10,49 @@
     <script src="//at.alicdn.com/t/font_1534975_zvmo65zlb8.js"></script>
     <title>方方的个人简历</title>
     <style>
-    .loading{
-  position:relative; 
-  height:100vh; 
-  width:100vw;
-}
-.loading::before,.loading::after{
-  position:absolute;
-  top:0;
-  left:0;
-  bottom:0;
-  right:0;
-  width:0;
-  height:0;
-  content:'';
-  display:inline-block;
-  background:black;
-  border-radius:50%;
-  animation:s 1.5s linear infinite;
-  margin:auto;
-}
+        .loading {
+            position: relative;
+            height: 100vh;
+            width: 100vw;
+        }
 
-.loading::after{
-  animation-delay:0.8s;
-}
-@keyframes s{
-  0%{
-    width:0;
-    height:0;
-    opacity:1;
-  }
-  100%{
-    width:100px;
-    height:100px;
-    opacity:0;
-  }
-}
+        .loading::before,
+        .loading::after {
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            width: 0;
+            height: 0;
+            content: '';
+            display: inline-block;
+            background: black;
+            border-radius: 50%;
+            animation: s 1.5s linear infinite;
+            margin: auto;
+        }
+
+        .loading::after {
+            animation-delay: 0.8s;
+        }
+
+        @keyframes s {
+            0% {
+                width: 0;
+                height: 0;
+                opacity: 1;
+            }
+
+            100% {
+                width: 100px;
+                height: 100px;
+                opacity: 0;
+            }
+        }
     </style>
 </head>
+
 <body>
     <div class="site-welcome active" id="site-welcome">
         <div class="loading"></div>
@@ -60,25 +66,39 @@
                         <sapn class="card">card</sapn>
                     </a>
                 </div>
-                <nav>
+                <nav class="menu">
                     <ul class="clearfix">
-                        <li><a href="#">关于</a></li>
-                        <li><a href="#">技能</a></li>
-                        <li><a href="#">作品</a></li>
-                        <li><a href="#">博客</a></li>
+                        <li><a href="#about">关于</a></li>
+                        <li><a href="#siteSkills">技能</a></li>
+                        <li>
+                            <a href="#sitePortfolio">作品</a>
+                            <ul class="submenu">
+                                <li>作品1</li>
+                                <li>作品2</li>
+                                <li>作品3</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">博客</a>
+                            <ul class="submenu">
+                                <li>博客1</li>
+                                <li>博客2</li>
+                                <li>博客3</li>
+                            </ul>
+                        </li>
                         <li><a href="#">日历</a></li>
                         <li><a href="#">联系方式</a></li>
                         <li><a href="#">其他</a></li>
                     </ul>
                 </nav>
-            </div> 
+            </div>
         </div>
         <div class="banner">
             <div class="shade"></div>
         </div>
     </header>
     <main>
-        <div class="userCard">
+        <div class="userCard" id="about">
             <div class="portraitAndIntroduce clearfix">
                 <div class="portrait">
                     <img src="./img/avatar.jpg" alt="个人头像">
@@ -104,20 +124,20 @@
                 </div>
             </div>
             <footer class="SocialLink">
-                 <a href="">
+                <a href="">
                     <svg class="icon" aria-hidden="true">
-                        <use xlink:href="#icon-github"></use>       
+                        <use xlink:href="#icon-github"></use>
                     </svg>
                 </a>
                 <a href="">
                     <svg class="icon" aria-hidden="true">
-                        <use xlink:href="#icon-twitter"></use>       
+                        <use xlink:href="#icon-twitter"></use>
                     </svg>
                 </a>
                 <a href="">
-                        <svg class="icon" aria-hidden="true">
-                            <use xlink:href="#icon-weibo"></use>       
-                        </svg>
+                    <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-weibo"></use>
+                    </svg>
                 </a>
             </footer>
         </div>
@@ -126,48 +146,48 @@
         </div>
         <p>方应杭，资深前端工程师，资深前端讲师，现在在 饥人谷 教前端课程。<br>
             技能：前端开发，Rails 开发，Node.js 开发</p>
-        <section class="skills">
+        <section class="skills" id="siteSkills">
             <h2>技能</h2>
             <ul class="clearfix">
                 <li>
                     <h3>HTML 5 &amp; CSS 3</h3>
                     <div class="progressBar">
-                        <div class="progressBarInner" ></div>
+                        <div class="progressBarInner"></div>
                     </div>
                 </li>
                 <li>
                     <h3>JavaScript</h3>
                     <div class="progressBar">
-                            <div class="progressBarInner" style="width: 90%;"></div>
+                        <div class="progressBarInner" style="width: 90%;"></div>
                     </div>
                 </li>
                 <li>
                     <h3>jQuery</h3>
                     <div class="progressBar">
-                            <div class="progressBarInner" style="width: 85%;"></div>
+                        <div class="progressBarInner" style="width: 85%;"></div>
                     </div>
                 </li>
                 <li>
                     <h3>Vue.js</h3>
                     <div class="progressBar">
-                            <div class="progressBarInner" style="width: 82%;"></div>
+                        <div class="progressBarInner" style="width: 82%;"></div>
                     </div>
                 </li>
                 <li>
                     <h3>React.js</h3>
                     <div class="progressBar">
-                            <div class="progressBarInner" style="width: 74%;"></div>
+                        <div class="progressBarInner" style="width: 74%;"></div>
                     </div>
                 </li>
                 <li>
                     <h3>Node.js</h3>
                     <div class="progressBar">
-                            <div class="progressBarInner" style="width: 78%;"></div>
+                        <div class="progressBarInner" style="width: 78%;"></div>
                     </div>
                 </li>
-            </ul>           
+            </ul>
         </section>
-        <section class="portfolio">
+        <section class="portfolio" id="sitePortfolio">
             <h2>作品集</h2>
             <nav>
                 <ul class="clearfix">
@@ -184,28 +204,29 @@
                     <img src="./img/1.jpg" alt="作品1">
                 </div>
                 <div class="small">
-                        <img src="./img/2.jpg" alt="作品1">
+                    <img src="./img/2.jpg" alt="作品1">
                 </div>
                 <div class="small" style="top:312px">
-                        <img src="./img/3.jpg" alt="作品1">
+                    <img src="./img/3.jpg" alt="作品1">
                 </div>
             </div>
-        </section>    
+        </section>
     </main>
     <script src="./script.js"></script>
     <script>
-        setTimeout(function(){
+        setTimeout(function () {
             document.getElementById('site-welcome').classList.remove('active')
-        },700)
-        
-      window.onscroll = function(xxxx){
-          if(window.scrollY>0){
-              console.log(window.scrollY)
-              topNavBar.classList.add('sticky')
-          }else{
-              topNavBar.classList.remove('sticky')
-          }
-      }
+        }, 700)
+
+        window.onscroll = function (xxxx) {
+            if (window.scrollY > 0) {
+               
+                topNavBar.classList.add('sticky')
+            } else {
+                topNavBar.classList.remove('sticky')
+            }
+        }
     </script>
 </body>
+
 </html>

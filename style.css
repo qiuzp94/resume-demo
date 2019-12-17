@@ -33,6 +33,7 @@ body{
     width: 100%;
     padding:30px 8px;
     color: #B1B1B1;
+    
 }
 .topNavBar.sticky{
     padding:16px 8px;
@@ -52,6 +53,7 @@ body{
   font-weight: bold;
   font-size: 24px;
   margin-left: 8px;
+  
 }
 .logo a{
     text-decoration: none;
@@ -68,27 +70,71 @@ body{
 .topNavBar-inner nav{
     float: right;
     margin-right: 24px;
+    
 }
 
-.topNavBar-inner nav ul li{
+.topNavBar-inner nav ul>li{
     float: left;
-    padding: 2px 17px;
+    margin: 2px 14px;
+    position: relative;
+   
+    
+    
 }
 
-.topNavBar-inner nav ul li a{
+.topNavBar-inner nav ul>li>a{
     font-size: 12px;
     color: inherit;
     text-decoration: none;
-    
-    border-bottom: 3px solid transparent;
     font-family: 'KaiTi';
-    /* font-weight: bold; */
+    position: relative;
+    padding:5px 0;
+    display: block;
+
+    
+    
 }
-.topNavBar-inner nav ul li a:hover{
-    border-bottom: 3px solid #de6669;
+.topNavBar-inner nav ul>li.active>a::after{
+    content: '';
+    display: block;
+    position: absolute;
+    top:100%;
+    left:0;
+    width:100%;
+    height: 3px;
+    background: #E6686A;
+    animation: slider 0.5s;
+    
+}
+@keyframes slider{
+    0%{width:0}
+    100%{width:100%}
 }
 
+/* 子菜单代码如下 */
+.menu ul li>.submenu{
+    position: absolute;
+    display: none;
+    top:110%;
+    right: 0;
+    cursor: pointer;
+    background: #fff;
+    box-shadow: 0 0px 3px 0 rgba(0,0,0,0.5);  
+    color:#3d4451;
+}
 
+.menu ul li.active >.submenu{
+    display: block;
+    animation: submenuSlider 0.5s;
+}
+@keyframes submenuSlider{
+    0%{margin-right:100%}
+    100%{margin-right:0}
+}
+.menu .submenu>li{
+    white-space: nowrap;
+    padding:5px 6px;
+}
 /* 背景图代码如下 */
 .banner{
     background-image: url(./img/rs-cover.jpg);
