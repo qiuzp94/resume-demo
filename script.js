@@ -11,7 +11,6 @@ protfolio3.onclick = function () {
 
 //会动的二级菜单
 let liTags = document.querySelectorAll('nav.menu > ul >li')
-console.log(liTags)
 for (let i = 0; i < liTags.length; i++) {
     liTags[i].onmouseenter = function (x) {
         x.currentTarget.classList.add('active')
@@ -20,3 +19,18 @@ for (let i = 0; i < liTags.length; i++) {
         x.currentTarget.classList.remove('active')
     }
 }
+//点击导航栏自己滚动到对应 div
+let aTags = document.querySelectorAll('nav.menu > ul >li >a')
+for (let i = 0; i < aTags.length; i++) {
+    aTags[i].onclick = function (x) {
+        x.preventDefault()
+        let a = x.currentTarget
+        let href = a.getAttribute('href')
+        let element = document.querySelector(href)
+        let top = element.offsetTop
+        window.scrollTo(0, top - 80)
+        console.log(x)
+    }    
+}
+
+
