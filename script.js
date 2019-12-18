@@ -30,7 +30,7 @@ for (let i = 0; i < aTags.length; i++) {
         let top = element.offsetTop
         window.scrollTo(0, top - 80)
         console.log(x)
-    }    
+    }
 }
 
 
