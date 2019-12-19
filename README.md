@@ -1,6 +1,6 @@
 # resume-demo
 ## 预览地址
-[在线简介代码](https://qiuzp94.github.io/resume-demo/index.html)
+[在线简历预览](https://qiuzp94.github.io/resume-demo/index.html)
 
 ## 运用技术有
 * HTML5

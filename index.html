@@ -8,55 +8,11 @@
     <link rel="stylesheet" href="./init.css">
     <link rel="stylesheet" href="./style.css">
     <script src="//at.alicdn.com/t/font_1534975_vkz1cj3mj9.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tween.js/17.1.0/Tween.min.js"></script>
     <title>邱志堋的个人简历</title>
-    <style>
-        .loading {
-            position: relative;
-            height: 100vh;
-            width: 100vw;
-        }
-
-        .loading::before,
-        .loading::after {
-            position: absolute;
-            top: 0;
-            left: 0;
-            bottom: 0;
-            right: 0;
-            width: 0;
-            height: 0;
-            content: '';
-            display: inline-block;
-            background: black;
-            border-radius: 50%;
-            animation: s 1.5s linear infinite;
-            margin: auto;
-        }
-
-        .loading::after {
-            animation-delay: 0.8s;
-        }
-
-        @keyframes s {
-            0% {
-                width: 0;
-                height: 0;
-                opacity: 1;
-            }
-
-            100% {
-                width: 100px;
-                height: 100px;
-                opacity: 0;
-            }
-        }
-    </style>
 </head>
 
 <body>
-    <div class="site-welcome active" id="site-welcome">
-        <div class="loading"></div>
-    </div>
     <header>
         <div class="topNavBar" id="topNavBar">
             <div class="topNavBar-inner  clearfix">
@@ -68,18 +24,25 @@
                 </div>
                 <nav class="menu">
                     <ul class="clearfix">
-                        <li><a href="#about">关于</a></li>
+                        <li><a href="#siteAbout">关于</a></li>
                         <li><a href="#siteSkills">技能</a></li>
                         <li>
                             <a href="#sitePortfolio">作品</a>
                             <ul class="submenu">
-                                <li><a href="https://qiuzp94.github.io/resume-demo/index.html" target="_blank">在线个人简历</a></li>
+                                <li><a href="https://qiuzp94.github.io/resume-demo/index.html"
+                                        target="_blank">在线个人简历</a></li>
                                 <li><a href="https://qiuzp94.github.io/draw-demo/" target="_blank">手机画板</a></li>
-                                <li><a href="https://qiuzp94.github.io/myBookMark/index.html" target="_blank">导航书签</a></li>
+                                <li><a href="https://qiuzp94.github.io/myBookMark/index.html" target="_blank">导航书签</a>
+                                </li>
                             </ul>
                         </li>
                         <li>
-                            <a href="https://www.jianshu.com/u/33deabefd387" target="_blank">博客</a>
+                            <a href="#">博客</a>
+                            <ul class="submenu">
+                                <li>博客1</li>
+                                <li>博客2</li>
+                                <li>博客3</li>
+                            </ul>
                         </li>
                         <li><a href="#">日历</a></li>
                         <li><a href="#">联系方式</a></li>
@@ -93,7 +56,7 @@
         </div>
     </header>
     <main>
-        <div class="userCard" id="about">
+        <div data-x class="userCard" id="siteAbout">
             <div class="portraitAndIntroduce clearfix">
                 <div class="portrait">
                     <img src="./img/avatar.jpg" alt="个人头像">
@@ -141,48 +104,48 @@
         </div>
         <p>你好,我是邱志堋,应聘前端工程师,热爱代码,热爱钻研,熟悉 HTML、CSS、JavaScript 和 HTTP。<br>
             我现在使用的框架是 Vue</p>
-        <section class="skills" id="siteSkills">
+        <section data-x class="skills" id="siteSkills">
             <h2>技能</h2>
             <ul class="clearfix">
                 <li>
                     <h3>HTML 5 &amp; CSS 3</h3>
                     <div class="progressBar">
-                        <div class="progressBarInner"></div>
+                        <div class="progress" style="width: 90%;"></div>
                     </div>
                 </li>
                 <li>
                     <h3>JavaScript</h3>
                     <div class="progressBar">
-                        <div class="progressBarInner" style="width: 90%;"></div>
+                        <div class="progress" style="width: 85%;"></div>
                     </div>
                 </li>
                 <li>
                     <h3>jQuery</h3>
                     <div class="progressBar">
-                        <div class="progressBarInner" style="width: 85%;"></div>
+                        <div class="progress" style="width: 80%;"></div>
                     </div>
                 </li>
                 <li>
                     <h3>Vue.js</h3>
                     <div class="progressBar">
-                        <div class="progressBarInner" style="width: 82%;"></div>
+                        <div class="progress" style="width: 82%;"></div>
                     </div>
                 </li>
                 <li>
                     <h3>React.js</h3>
                     <div class="progressBar">
-                        <div class="progressBarInner" style="width: 74%;"></div>
+                        <div class="progress" style="width: 74%;"></div>
                     </div>
                 </li>
                 <li>
                     <h3>Node.js</h3>
                     <div class="progressBar">
-                        <div class="progressBarInner" style="width: 78%;"></div>
+                        <div class="progress" style="width: 78%;"></div>
                     </div>
                 </li>
             </ul>
         </section>
-        <section class="portfolio" id="sitePortfolio">
+        <section data-x class="portfolio" id="sitePortfolio">
             <h2>作品集</h2>
             <nav>
                 <ul class="clearfix">
@@ -208,20 +171,6 @@
         </section>
     </main>
     <script src="./script.js"></script>
-    <script>
-        setTimeout(function () {
-            document.getElementById('site-welcome').classList.remove('active')
-        }, 700)
-
-        window.onscroll = function (xxxx) {
-            if (window.scrollY > 0) {
-               
-                topNavBar.classList.add('sticky')
-            } else {
-                topNavBar.classList.remove('sticky')
-            }
-        }
-    </script>
 </body>
 
 </html>
