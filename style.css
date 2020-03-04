@@ -94,3 +94,32 @@ section.skills.offset .progress{
 [data-x]{ transform: translateY(0); transition: all 0.5s; } 
 
 
+
+
+.swiper-container {
+    width: 100%;
+    box-sizing:border-box;
+    border:20px solid white;
+    border-radius: 5px;
+    box-shadow: 1px 1px 7px 0px rgba(0,0,0,0.7); border-radius: 1px;
+}
+.swiper-slide > a > img{
+    width: 940px;
+}
+
+.swiper-slide{
+    position: relative;
+}
+.swiper-text{
+    position: absolute;
+    top:0;
+    left:0;
+    color:white;
+    font-size: 25px;
+    background-color:#e4696c;
+    opacity: 0.5;
+    width: 300px;
+    line-height: 60px;
+    font-family: Arial, Helvetica, sans-serif;
+    
+}

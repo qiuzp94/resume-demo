@@ -7,8 +7,10 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="./init.css">
     <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/css/swiper.min.css">
     <script src="//at.alicdn.com/t/font_1534975_vkz1cj3mj9.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tween.js/17.1.0/Tween.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/js/swiper.min.js"></script>
     <title>邱志堋的个人简历</title>
 </head>
 
@@ -147,7 +149,7 @@
         </section>
         <section data-x class="portfolio" id="sitePortfolio">
             <h2>作品集</h2>
-            <nav>
+            <!-- <nav>
                 <ul class="clearfix">
                     <li id="protfolio1">所有</li>
                     <li id="protfolio2">框架</li>
@@ -156,19 +158,45 @@
                 <div class="bar">
                     <div class="barInner" id="protfolioBar"></div>
                 </div>
-            </nav>
-            <div class="atlas">
-                <div class="big">
-                    <img src="./img/1.jpg" alt="作品1">
+            </nav> -->
+            <div class="swiper-container">
+
+                <div class="swiper-wrapper">
+
+                    <div class="swiper-slide">
+                        <a href="https://qiuzp94.github.io/Apple-like-Gallery-Slideshow/." target="_blank">
+                            <img src="./img/demo-img-min/apple-slide-demo-img-min.png" alt="apple-slide-demo-img">
+                        </a>
+                        <div class="swiper-text">仿苹果轮播项目</div>
+                    </div>
+
+                    <div class="swiper-slide"><a href="https://github.com/qiuzp94/draw-demo" target="_blank">
+                            <img src="./img/demo-img-min/canvas-demo-img-min.png" alt="canvas-demo-img-min">
+                        </a>
+                        <div class="swiper-text">在线画笔项目</div>
+                    </div>
+
+                    <div class="swiper-slide"><a href="https://qiuzp94.github.io/myBookMark/index.html" target="_blank">
+                            <img src="./img/demo-img-min/keypress-demo-img-min.png" alt="keypress-demo-img"></a>
+                        <div class="swiper-text">在线书签导航项目</div>
+                    </div>
+
+                    <div class="swiper-slide"><a href="https://github.com/qiuzp94/translate" target="_blank">
+                            <img src="./img/demo-img-min/translation-demo-img-min.png" alt="translation-demo-img"></a>
+                        <div class="swiper-text">翻译小程序项目</div>
+                    </div>
                 </div>
-                <div class="small">
-                    <img src="./img/2.jpg" alt="作品1">
-                </div>
-                <div class="small" style="top:312px">
-                    <img src="./img/3.jpg" alt="作品1">
-                </div>
+
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+
+
             </div>
         </section>
+
+
+
     </main>
     <script src="./script.js"></script>
 </body>
