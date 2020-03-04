@@ -1,13 +1,3 @@
-//作品集bar状态控制器如下
-// protfolio1.onclick = function () {
-//     protfolioBar.className = ("barInner state1")
-// }
-// protfolio2.onclick = function () {
-//     protfolioBar.className = ("barInner state2")
-// }
-// protfolio3.onclick = function () {
-//     protfolioBar.className = ("barInner state3")
-// }
 
 // 第一部分 特别的tags、寻找最近的元素 onscroll事件
 let specialTags = document.querySelectorAll('[data-x]')
@@ -115,8 +105,5 @@ var mySwiper = new Swiper ('.swiper-container', {
       prevEl: '.swiper-button-prev',
     },
 
-    // And if we need scrollbar
-    // scrollbar: {
-    //   el: '.swiper-scrollbar',
-    // },
+    
   })

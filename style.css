@@ -104,7 +104,7 @@ section.skills.offset .progress{
     box-shadow: 1px 1px 7px 0px rgba(0,0,0,0.7); border-radius: 1px;
 }
 .swiper-slide > a > img{
-    width: 940px;
+    width: 940px; 
 }
 
 .swiper-slide{
@@ -116,10 +116,19 @@ section.skills.offset .progress{
     left:0;
     color:white;
     font-size: 25px;
-    background-color:#e4696c;
-    opacity: 0.5;
+    background-color:rgba(0, 0, 0, 0.1);
     width: 300px;
     line-height: 60px;
     font-family: Arial, Helvetica, sans-serif;
+    
+}
+
+.swiper-button-prev,
+.swiper-button-next
+{
+    width:100px;
+    height:100px;
+    background-color:rgba(255, 255, 255, 0.4);
+    border-radius: 50px;
     
 }
