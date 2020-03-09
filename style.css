@@ -55,8 +55,14 @@ a.downloadResume{ display: inline-block; color:#3d4456; font-size: 14px; padding
 a.downloadResume:hover{ box-shadow: 1px 1px 6px 0px rgba(0,0,0,0.35); transition: box-shadow 0.2s; }
 main>p{ text-align: center; color:black; line-height: 150%; font-family:"STKaiti"; font-size: 19px; }
 /* 技能条代码如下 */
-section.skills, section.portfolio{ margin-top:50px; margin-left:auto; margin-right:auto; }
-section.skills>h2, section.portfolio>h2{ font-size: 35px; text-align: center; font-family: "STHeiti"; line-height: 35px;
+section.messageListFrame,
+section.message,
+section.skills, 
+section.portfolio{ margin-top:50px; margin-left:auto; margin-right:auto; }
+section.messageListFrame>h2,
+section.message>h2, 
+section.skills>h2, 
+section.portfolio>h2{ font-size: 35px; text-align: center; font-family: "STHeiti"; line-height: 35px;
     padding:30px 0; font-weight: bold; color:#3d4450; }
 section.skills>ul{ box-sizing: border-box; background-color: #ffffff; padding:25px 50px 50px; 
     box-shadow: 1px 1px 7px 0px rgba(0,0,0,0.7); border-radius: 1px; }
@@ -67,70 +73,33 @@ section.skills>ul>li:nth-child(even){ float: right; }
 .progressBar>.progress{ background-color:#e4696c; height: 5px; width:75%; border-radius: 2px; 
     transform: translateX(0); transition: all 1s;;
 }
-section.skills.offset .progress{
-    transform: translateX(-100%);
-  }
-
-
-
+section.skills.offset .progress{ transform: translateX(-100%); }
 /* 作品集代码如下 */
 .portfolio{ text-align: center; }
-.portfolio>nav{ color:black; display: inline-block; vertical-align: top; margin-bottom: 25px; }
-.portfolio>nav>ul{ cursor: pointer; }
-.portfolio>nav>ul>li{ float:left; padding-left: 45px; }
-.portfolio>nav>ul>li:nth-child(1){ padding-left:0; }
-.bar{ margin-top:5px; background-color: #ffffff; border-radius: 2px; }
-.bar>.barInner{ background-color:#e4696c; height: 5px; border-radius: 2px; transition: all 0.3s; width: 40px; margin-left:0px; }
-.bar>.state2{ width: 49px; margin-left:64px; } 
-.bar>.state3{ width: 91px; margin-left:139px; }
-.bar>.state1{ width: 41px; margin-left:0px; } 
-.atlas{ position: relative; height: 597px; }
-.atlas>.big, .atlas>.small{ position: absolute; }
-.atlas>.big{ top:0px; left: 0px; }
-.atlas>.small{ position: absolute; top:0px; left: 645px; }
-
-
+.swiper-container { width: 100%; box-sizing:border-box; border:20px solid white;  box-shadow: 1px 1px 7px 0px rgba(0,0,0,0.7); border-radius: 1px; }
+.swiper-slide > a > img{ width: 940px; }
+.swiper-slide{ position: relative; }
+.swiper-text{ position: absolute; top:0; left:0; color:white; font-size: 25px; background-color:rgba(0, 0, 0, 0.1); 
+    width: 300px; line-height: 60px; font-family: Arial, Helvetica, sans-serif;} 
+.swiper-button-prev, .swiper-button-next { width:100px; height:100px; background-color:rgba(255, 255, 255, 0.4); border-radius: 50px; }
 [data-x].offset{ transform: translateY(100px); }
 [data-x]{ transform: translateY(0); transition: all 0.5s; } 
-
-
-
-
-.swiper-container {
-    width: 100%;
-    box-sizing:border-box;
-    border:20px solid white;
-    border-radius: 5px;
-    box-shadow: 1px 1px 7px 0px rgba(0,0,0,0.7); border-radius: 1px;
-}
-.swiper-slide > a > img{
-    width: 940px; 
-}
-
-.swiper-slide{
-    position: relative;
-}
-.swiper-text{
-    position: absolute;
-    top:0;
-    left:0;
-    color:white;
-    font-size: 25px;
-    background-color:rgba(0, 0, 0, 0.1);
-    width: 300px;
-    line-height: 60px;
-    font-family: Arial, Helvetica, sans-serif;
-   
-    
-}
-
-.swiper-button-prev,
-.swiper-button-next
-{
-    width:100px;
-    height:100px;
-    background-color:rgba(255, 255, 255, 0.4);
- 
-    border-radius: 50px;
-    
-}
+/* 在线留言代码如下 */
+.messageList,
+.postMessageForm{
+    box-shadow: 1px 1px 7px 0px rgba(0,0,0,0.7); box-sizing:border-box; border:20px solid white; background-color:#fff; }
+.postMessageForm > input[type=text]{ width:300px; height:30px; }
+.postMessageForm > input[name=name],
+.postMessageForm > input[name=content]{ margin-right: 30px; }
+.postMessageForm > input[type=text]:focus{ outline: none; }
+.postMessageForm > label{ line-height: 30px; font-size:18px; }
+.postMessageForm > input[type=submit]{ background-color:#e4696c; opacity: 0.6; color:#efefef; width: 100px; text-align: center; line-height: 32px; }
+.postMessageForm > input[type=submit]:focus{ outline: none; }
+.postMessageForm > input[type=submit]:hover{ opacity: 1; transition: all 0.4s; cursor: pointer; }
+/* 留言板代码如下 */
+.messageListFrame{ margin-bottom: 100px; } 
+.messageList > li{ font-size: 28px; line-height: 40px; background-color:#eee; padding:0px 20px; }
+.messageList > li:first-child{ border-top-left-radius: 10px; border-top-right-radius: 10px; }
+.messageList > li:last-child{ border-bottom-left-radius: 10px; border-bottom-right-radius: 10px; }
+.messageList > li:nth-child(2n+1){ background-color:#fff; } 
+.messageList > li:hover{ background-color:#e4696c; color:#fff; }

@@ -51,6 +51,6 @@
 
 
 
-    controller.call(null, view)
+    controller.init(view)
 }.call()
 
