@@ -21,9 +21,9 @@ query.find()
             })
             console.log(array)
         }
-        
+
     );
-    console.log(AV.Object)
+console.log(AV.Object)
 let myForm = document.querySelector('#postMessageForm')
 myForm.addEventListener('submit', function (e) {
     e.preventDefault()//阻止默认事件，否则会有默认跳转
@@ -43,8 +43,7 @@ myForm.addEventListener('submit', function (e) {
         location.reload(true);
     })
     alert('留言成功啦')
-    
+
 
 })
-
 

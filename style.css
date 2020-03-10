@@ -55,11 +55,9 @@ a.downloadResume{ display: inline-block; color:#3d4456; font-size: 14px; padding
 a.downloadResume:hover{ box-shadow: 1px 1px 6px 0px rgba(0,0,0,0.35); transition: box-shadow 0.2s; }
 main>p{ text-align: center; color:black; line-height: 150%; font-family:"STKaiti"; font-size: 19px; }
 /* 技能条代码如下 */
-section.messageListFrame,
 section.message,
 section.skills, 
 section.portfolio{ margin-top:50px; margin-left:auto; margin-right:auto; }
-section.messageListFrame>h2,
 section.message>h2, 
 section.skills>h2, 
 section.portfolio>h2{ font-size: 35px; text-align: center; font-family: "STHeiti"; line-height: 35px;
@@ -85,20 +83,20 @@ section.skills.offset .progress{ transform: translateX(-100%); }
 [data-x].offset{ transform: translateY(100px); }
 [data-x]{ transform: translateY(0); transition: all 0.5s; } 
 /* 在线留言代码如下 */
-.messageList,
-.postMessageForm{
-    box-shadow: 1px 1px 7px 0px rgba(0,0,0,0.7); box-sizing:border-box; border:20px solid white; background-color:#fff; }
+.messageFramke{
+    box-shadow: 1px 1px 7px 0px rgba(0,0,0,0.7); box-sizing:border-box; border:20px solid white; background-color:#fff;}
 .postMessageForm > input[type=text]{ width:300px; height:30px; }
 .postMessageForm > input[name=name],
 .postMessageForm > input[name=content]{ margin-right: 30px; }
 .postMessageForm > input[type=text]:focus{ outline: none; }
 .postMessageForm > label{ line-height: 30px; font-size:18px; }
-.postMessageForm > input[type=submit]{ background-color:#e4696c; opacity: 0.6; color:#efefef; width: 100px; text-align: center; line-height: 32px; }
+.postMessageForm > input[type=submit]{ background-color:#e4696c; color:#efefef; width: 100px; text-align: center; line-height: 32px; }
 .postMessageForm > input[type=submit]:focus{ outline: none; }
-.postMessageForm > input[type=submit]:hover{ opacity: 1; transition: all 0.4s; cursor: pointer; }
-/* 留言板代码如下 */
-.messageListFrame{ margin-bottom: 100px; } 
-.messageList > li{ font-size: 28px; line-height: 40px; background-color:#eee; padding:0px 20px; }
+.postMessageForm > input[type=submit]:hover{ background-color:#c93033;; transition: all 0.4s; cursor: pointer; }
+.postMessageForm{
+    margin-top: 25px;
+}
+.messageList > li{ font-size: 16px; line-height: 44px; background-color:#eee; padding:0px 20px; }
 .messageList > li:first-child{ border-top-left-radius: 10px; border-top-right-radius: 10px; }
 .messageList > li:last-child{ border-bottom-left-radius: 10px; border-bottom-right-radius: 10px; }
 .messageList > li:nth-child(2n+1){ background-color:#fff; } 
