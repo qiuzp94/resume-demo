@@ -1,6 +1,6 @@
 // 特别的tags、寻找最近的元素 onscroll事件
 !function () {
-    var view = document.querySelector('#topNavBar')
+    var view = View('#topNavBar')
 
     var controller = {
         view: null,

@@ -1,7 +1,8 @@
 //swiper 初始化代码 如下 
 
 !function () {
-  var view = document.querySelector('#mySlides')
+  
+  var view = View('#mySlides')
   var controller = {
     view: null,
     swiper: null,
